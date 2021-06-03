@@ -8,7 +8,7 @@ const IndexPage = () => {
   const editor = useMemo(() => withHistory(withReact(createEditor())), [])
   return (
     <Slate editor={editor} value={value} onChange={(value) => setValue(value)}>
-      <Editable placeholder="Enter some plain text..." />
+      <Editable spellCheck='true' autoCorrect='true' autoCapitalize='true' placeholder="Enter some plain text..." />
     </Slate>
   )
 }
